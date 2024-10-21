@@ -1,0 +1,16 @@
+[project]
+authors = ["Ondřej Čertík <ondrej@certik.us>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "ledger"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+build = "cmake -GNinja -B build -DBoost_USE_STATIC_LIBS=OFF -DBUILD_LIBRARY=off . && cmake --build build -j 8"
+
+[dependencies]
+cmake = ">=3.30.5,<4"
+boost = "1.72.*"
+gmp = ">=6.3.0,<7"
+mpfr = ">=4.2.1,<5"
