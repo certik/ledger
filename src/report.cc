@@ -58,16 +58,16 @@ void report_t::normalize_options(const string& verb)
 
 #if HAVE_ISATTY
   if (! HANDLED(force_color)) {
-    if (! HANDLED(no_color) && isatty(STDOUT_FILENO))
+    if (! HANDLED(no_color) && isatty(_fileno(stdout)))
       HANDLER(color).on("?normalize");
-    if (HANDLED(color) && ! isatty(STDOUT_FILENO))
+    if (HANDLED(color) && ! isatty(_fileno(stdout)))
       HANDLER(color).off();
   }
   else {
     HANDLER(color).on("?normalize");
   }
   if (! HANDLED(force_pager)) {
-    if (HANDLED(pager_) && ! isatty(STDOUT_FILENO))
+    if (HANDLED(pager_) && ! isatty(_fileno(stdout)))
       HANDLER(pager_).off();
   }
 #endif

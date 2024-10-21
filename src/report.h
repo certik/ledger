@@ -809,31 +809,7 @@ public:
   OPTION(report_t, output_); // -o
 
 // setenv() is not available on WIN32
-#if HAVE_ISATTY and !defined(_WIN32) and !defined(__CYGWIN__)
-  OPTION__
-  (report_t, pager_,
-   CTOR(report_t, pager_) {
-     if (isatty(STDOUT_FILENO)) {
-       if (! std::getenv("PAGER")) {
-         bool have_less = false;
-         if (exists(path("/opt/local/bin/less")) ||
-             exists(path("/usr/local/bin/less")) ||
-             exists(path("/usr/bin/less")))
-           have_less = true;
-
-         if (have_less) {
-           on(none, "less");
-           setenv("LESS", "-FRSX", 0); // don't overwrite
-         }
-       } else {
-           on(none, std::getenv("PAGER"));
-           setenv("LESS", "-FRSX", 0); // don't overwrite
-       }
-     }
-   });
-#else // HAVE_ISATTY
   OPTION(report_t, pager_);
-#endif // HAVE_ISATTY
 
   OPTION_(report_t, no_pager, DO() {
       OTHER(pager_).off();

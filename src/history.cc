@@ -35,14 +35,12 @@
 #include <boost/graph/filtered_graph.hpp>
 #include <boost/graph/dijkstra_shortest_paths.hpp>
 #include <boost/graph/graphviz.hpp>
+#include <functional>
 
 #include "history.h"
 
 template <typename T>
 struct f_max
-#if __cplusplus < 201103L
-: public std::binary_function<T, T, bool>
-#endif
 {
   T operator()(const T& x, const T& y) const {
     return std::max(x, y);

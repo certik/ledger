@@ -30,6 +30,7 @@
  */
 
 #include <system.hh>
+#include <functional>
 
 #include "item.h"
 
@@ -106,7 +107,6 @@ optional<value_t> item_t::get_tag(const mask_t& tag_mask,
 namespace {
   struct CaseInsensitiveKeyCompare
 #if __cplusplus < 201103L
-    : public std::binary_function<string, string, bool>
 #endif
   {
     bool operator()(const string& s1, const string& s2) const {
