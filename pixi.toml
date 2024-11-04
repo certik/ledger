@@ -9,6 +9,7 @@ version = "0.1.0"
 [tasks]
 build = "cmake -GNinja -B build -DBoost_USE_STATIC_LIBS=OFF -DBUILD_LIBRARY=off . && cmake --build build -j 8"
 run = "build/ledger.exe"
+install = "cp build/ledger.exe .pixi/envs/default/Library/bin/"
 
 [dependencies]
 cmake = ">=3.30.5,<4"
