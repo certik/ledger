@@ -7,7 +7,7 @@ platforms = ["win-64", "osx-arm64"]
 version = "0.1.0"
 
 [tasks]
-build = "cmake -GNinja -B build -DBoost_USE_STATIC_LIBS=OFF -DBUILD_LIBRARY=off . && cmake --build build -j 8"
+build = "cmake -DCMAKE_BUILD_TYPE=Release -GNinja -B build -DBoost_USE_STATIC_LIBS=OFF -DBUILD_LIBRARY=off . && cmake --build build -j 8"
 run = "build/ledger"
 install = "cp build/ledger.exe .pixi/envs/default/Library/bin/"
 
