@@ -3,7 +3,7 @@ authors = ["Ondřej Čertík <ondrej@certik.us>"]
 channels = ["conda-forge"]
 description = "Add a short description here"
 name = "ledger"
-platforms = ["win-64"]
+platforms = ["win-64", "osx-arm64"]
 version = "0.1.0"
 
 [tasks]
@@ -13,6 +13,7 @@ install = "cp build/ledger.exe .pixi/envs/default/Library/bin/"
 
 [dependencies]
 cmake = ">=3.30.5,<4"
-boost = "1.72.*"
+boost = "1.74.0"
 gmp = ">=6.3.0,<7"
 mpfr = ">=4.2.1,<5"
+ninja = ">=1.12.1,<2"
