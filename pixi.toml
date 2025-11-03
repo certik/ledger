@@ -3,7 +3,8 @@ authors = ["Ondřej Čertík <ondrej@certik.us>"]
 channels = ["conda-forge"]
 description = "Add a short description here"
 name = "ledger"
-platforms = ["win-64", "osx-arm64"]
+#platforms = ["win-64", "osx-arm64"]
+platforms = ["win-64"]
 version = "3.3.2"
 preview = ["pixi-build"]
 
