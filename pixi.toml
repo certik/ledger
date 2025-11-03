@@ -14,9 +14,10 @@ ledger = { path = "." }
 name = "ledger"
 version = "0.1.0"
 
-[package.build.backend]
-name = "pixi-build-cmake"
-version = "0.1.*"
+[package.build]
+backend = { name = "pixi-build-cmake", version = "0.3.*" }
+
+[package.build.config]
 extra-args = ["-DBoost_USE_STATIC_LIBS=OFF", "-DBUILD_LIBRARY=off"]
 
 [package.host-dependencies]
