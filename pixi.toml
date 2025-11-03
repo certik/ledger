@@ -24,3 +24,6 @@ extra-args = ["-DBoost_USE_STATIC_LIBS=OFF", "-DBUILD_LIBRARY=off"]
 boost = "1.72.*"
 gmp = ">=6.3.0,<7"
 mpfr = ">=4.2.1,<5"
+
+[package.run-dependencies]
+boost = "1.72.*"
