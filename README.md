@@ -159,6 +159,18 @@ and testing Ledger.
 
 You can run `make check` to confirm the result, and `make install` to install.
 
+### Build using Pixi
+
+```
+pixi build
+```
+
+Install globally:
+
+```
+pixi global install --path
+```
+
 ## Resources
 
 Now that you're up and running, here are a few resources to keep in mind:
