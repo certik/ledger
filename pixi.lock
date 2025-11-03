@@ -117,7 +117,7 @@ packages:
   timestamp: 1718982076982
 - conda: .
   name: ledger
-  version: 0.1.0
+  version: 3.3.2
   build: h9352c13_0
   subdir: win-64
   depends:
@@ -128,7 +128,7 @@ packages:
   - gmp >=6.3.0,<7.0a0
   - mpfr >=4.2.1,<5.0a0
   input:
-    hash: f6bb10a1eb7ae4c6e918887262f5c91e9855fe60765580ea377c50f051ddcfbb
+    hash: b4022fbac7b08de42954d0b3c0d87da23b20f7a81df0fc83a56b566d0f083d12
     globs: []
 - conda: https://conda.anaconda.org/conda-forge/win-64/libblas-3.9.0-38_hf2e6a31_mkl.conda
   build_number: 38

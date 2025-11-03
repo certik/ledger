@@ -168,7 +168,7 @@ pixi build
 Install globally:
 
 ```
-pixi global install --path ledger-0.1.0-h9352c13_0.conda
+pixi global install --path ledger-3.3.2-h9352c13_0.conda
 ```
 
 To update it to a newer version, add the `--force-reinstall` option.
