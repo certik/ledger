@@ -3,8 +3,7 @@ authors = ["Ondřej Čertík <ondrej@certik.us>"]
 channels = ["conda-forge"]
 description = "Add a short description here"
 name = "ledger"
-#platforms = ["win-64", "osx-arm64"]
-platforms = ["win-64"]
+platforms = ["win-64", "osx-arm64"]
 version = "3.3.2"
 preview = ["pixi-build"]
 
@@ -22,9 +21,9 @@ backend = { name = "pixi-build-cmake", version = "0.3.*" }
 extra-args = ["-DBoost_USE_STATIC_LIBS=OFF", "-DBUILD_LIBRARY=off"]
 
 [package.host-dependencies]
-boost = "1.72.*"
+boost = "==1.85.0"
 gmp = ">=6.3.0,<7"
 mpfr = ">=4.2.1,<5"
 
 [package.run-dependencies]
-boost = "1.72.*"
+boost = "==1.85.0"
